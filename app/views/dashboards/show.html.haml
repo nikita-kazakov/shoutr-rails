@@ -4,5 +4,11 @@
   =form.text_field :body, placeholder: "shout here!", required: true
   =form.submit "Submit"
 
--@shouts.each do|shout|
-  %div= shout.body
+-#Commented out because we're going to render this in partial.
+-#-@shouts.each do|shout|
+-#  %div
+-#    =shout.user.username
+-#    =shout.body
+-#    ="#{time_ago_in_words(shout.created_at)} ago"
+
+=render @shouts
